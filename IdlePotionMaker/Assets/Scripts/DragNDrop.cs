@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DragNDrop : MonoBehaviour
 {
+    private Vector3 startPos;
+
+    private void Awake()
+    {
+        startPos = transform.position;
+    }
     private Vector3 mouseOffset;
 
     private Vector3 MousePosition()
@@ -20,5 +26,10 @@ public class DragNDrop : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mouseOffset);
+    }
+
+    private void OnMouseUp()
+    {
+        transform.position = startPos;
     }
 }
