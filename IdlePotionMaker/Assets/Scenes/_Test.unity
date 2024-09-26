@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brewtext: {fileID: 1773623997}
-  brewTime: 10
+  potion: {fileID: 6081149358824809557, guid: 64aea7ca5882e21418c69d47f9dd7b68, type: 3}
 --- !u!136 &916761248
 CapsuleCollider:
   m_ObjectHideFlags: 0

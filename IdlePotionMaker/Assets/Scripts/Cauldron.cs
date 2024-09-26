@@ -10,27 +10,27 @@ public class Cauldron : MonoBehaviour
     private bool full;
 
     public Text brewtext;
-    public int brewTime;
+    private int brewTime;
+
+    public GameObject potion;
+
+    private bool spawnPotion;
 
     // Start is called before the first frame update
     void Start()
     {
         full = false;
-        brewtext = null;
+        brewtext.text = "";
+        spawnPotion = false;
+        brewTime = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ingredients >= 2)
+        if (ingredients == 2)
         {
-            full=true;
-            ChangeText();
-            StartCoroutine(CountDown());
-            if(brewTime == 0) 
-            {
-                brewtext.text = "Done";
-            }
+            Brewing();
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -44,12 +44,34 @@ public class Cauldron : MonoBehaviour
 
     private IEnumerator CountDown()
     {
-        brewTime--;
-        yield return new WaitForSeconds(1);
+        while(brewTime > 0)
+        {
+            Debug.Log("minus" + brewTime);
+            yield return new WaitForSeconds(1f);
+            brewTime--;
+        }
+    }
+
+    private void Brewing()
+    {
+        //if (ingredients == 2)
+        //{
+        ChangeText();
+        StartCoroutine(CountDown());
+        if(brewTime < 0 ) 
+        {
+            ingredients = 0;
+            GameObject newpo = Instantiate(potion);
+        }
+        //}
     }
 
     private void ChangeText()
     {
         brewtext.text = "Brewing: " + brewTime.ToString();
+        if(brewTime <= 0) 
+        {
+            brewtext.text = "Done";
+        }
     }
 }
