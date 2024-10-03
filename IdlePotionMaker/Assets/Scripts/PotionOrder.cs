@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PotionOrder : MonoBehaviour
@@ -14,5 +15,13 @@ public class PotionOrder : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Potion")
+        {
+            other.gameObject.SetActive(false);
+        }
     }
 }
