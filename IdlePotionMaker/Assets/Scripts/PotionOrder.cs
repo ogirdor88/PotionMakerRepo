@@ -21,7 +21,7 @@ public class PotionOrder : MonoBehaviour
     {
         if (other.tag == "Potion")
         {
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
     }
 }

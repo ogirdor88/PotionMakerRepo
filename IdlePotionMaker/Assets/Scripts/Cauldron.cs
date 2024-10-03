@@ -38,7 +38,7 @@ public class Cauldron : MonoBehaviour
     {
         if (!full)
         {
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
             ingredients++;
         }
     }
