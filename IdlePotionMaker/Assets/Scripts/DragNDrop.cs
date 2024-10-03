@@ -5,12 +5,12 @@ using UnityEngine;
 public class DragNDrop : MonoBehaviour
 {
     private Vector3 startPos;
+    private Vector3 mouseOffset;
 
     private void Awake()
     {
         startPos = transform.position;
     }
-    private Vector3 mouseOffset;
 
     private Vector3 MousePosition()
     {

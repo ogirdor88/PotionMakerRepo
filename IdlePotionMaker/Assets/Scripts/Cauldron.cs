@@ -16,6 +16,8 @@ public class Cauldron : MonoBehaviour
 
     private bool spawnPotion;
 
+    private Vector3 spawnPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class Cauldron : MonoBehaviour
         brewtext.text = "";
         spawnPotion = false;
         brewTime = 10;
+        spawnPosition =  new Vector3(this.transform.position.x, this.transform.position.y + 1.0f, this.transform.position.z);
     }
 
     // Update is called once per frame
@@ -38,8 +41,11 @@ public class Cauldron : MonoBehaviour
     {
         if (!full)
         {
-            Destroy(other.gameObject);
-            ingredients++;
+            if(other.tag == "Ingredient")
+            {
+                Destroy(other.gameObject);
+                ingredients++;
+            }
         }
     }
 
@@ -65,6 +71,7 @@ public class Cauldron : MonoBehaviour
             {
                 ingredients = 0;
                 GameObject newpo = Instantiate(potion);
+                newpo.transform.position = spawnPosition;
                 brewtext.text = "";
                 brewTime = 10;
                 spawnPotion= false;
