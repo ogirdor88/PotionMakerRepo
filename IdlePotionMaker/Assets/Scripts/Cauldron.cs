@@ -31,6 +31,7 @@ public class Cauldron : MonoBehaviour
         if (ingredients == 2)
         {
             Brewing();
+            spawnPotion = true;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -60,8 +61,14 @@ public class Cauldron : MonoBehaviour
         StartCoroutine(CountDown());
         if(brewTime < 0 ) 
         {
-            ingredients = 0;
-            GameObject newpo = Instantiate(potion);
+            if(spawnPotion) 
+            {
+                ingredients = 0;
+                GameObject newpo = Instantiate(potion);
+                brewtext.text = "";
+                brewTime = 10;
+                spawnPotion= false;
+            }
         }
         //}
     }
