@@ -22,6 +22,6 @@ public class IngredientSpawner : MonoBehaviour
     private void OnMouseDown()
     {
         GameObject newIn = Instantiate(IngredientPrefab);
-        newIn.transform.position = this.transform.position;
+        newIn.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - .5f);
     }
 }
