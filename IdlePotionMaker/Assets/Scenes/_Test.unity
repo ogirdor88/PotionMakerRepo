@@ -294,9 +294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brewtext: {fileID: 1773623997}
-  potion1: {fileID: 2990096178052529098, guid: 686280a50b69e474bbe84b6e8f8fec51, type: 3}
-  potion2: {fileID: 5735579263090541293, guid: 6995af1b26effb24fae8fcb8f37a6cc3, type: 3}
-  potion3: {fileID: 1998020428101328333, guid: 24a03d37a3a26944b9401b6a47a14412, type: 3}
+  potion1: {fileID: 5319644617665651848, guid: caa6a5d3659070e46ade0d900fc82461, type: 3}
+  potion2: {fileID: 3348909458598418230, guid: cb85fc8b2f066cd42b9c1375877de56f, type: 3}
+  potion3: {fileID: 6764311999962296071, guid: 35f0b5b3dcea97b49a4db87abec839aa, type: 3}
 --- !u!136 &916761248
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -599,6 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71685d57e8a018a4eadafc29ca11a537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ordertext: {fileID: 1407047983}
 --- !u!54 &1133832860
 Rigidbody:
   m_ObjectHideFlags: 0

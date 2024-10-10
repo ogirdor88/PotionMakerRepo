@@ -10,7 +10,9 @@ public class Cauldron : MonoBehaviour
     private bool full;
 
     public Text brewtext;
-    private int brewTime;
+    private float brewTime;
+
+    private float maxTime;
 
     public GameObject potion1;
     public GameObject potion2;
@@ -32,6 +34,7 @@ public class Cauldron : MonoBehaviour
         spawnPotion = false;
         brewTime = 10;
         spawnPosition =  new Vector3(this.transform.position.x, this.transform.position.y + 2.0f, this.transform.position.z);
+        maxTime = brewTime;
     }
 
     // Update is called once per frame
@@ -60,12 +63,9 @@ public class Cauldron : MonoBehaviour
 
     private IEnumerator CountDown()
     {
-        while(brewTime > 0)
-        {
-            Debug.Log("minus" + brewTime);
-            yield return new WaitForSeconds(1f);
-            brewTime--;
-        }
+        Debug.Log("minus" + brewTime);
+        brewTime -= 1* Time.deltaTime;
+        yield return new WaitForSeconds(1f);
     }
 
     private void Brewing()
@@ -73,15 +73,18 @@ public class Cauldron : MonoBehaviour
         //if (ingredients == 2)
         //{
         ChangeText();
-        StartCoroutine(CountDown());
-        if(brewTime < 0 ) 
+        if( brewTime > 0) 
+        {
+            StartCoroutine(CountDown());
+        }
+        if(brewTime <= 0 ) 
         {
             if(spawnPotion) 
             {
                 ingredients = 0;
                 CheckPotion();
                 brewtext.text = "";
-                brewTime = 10;
+                brewTime = maxTime;
                 spawnPotion= false;
             }
         }
@@ -122,7 +125,7 @@ public class Cauldron : MonoBehaviour
 
     private void ChangeText()
     {
-        brewtext.text = "Brewing: " + brewTime.ToString();
+        brewtext.text = "Brewing: " + brewTime.ToString("0");
         if(brewTime <= 0) 
         {
             brewtext.text = "Done";
