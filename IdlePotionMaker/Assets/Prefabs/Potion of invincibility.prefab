@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2626518192682728400}
   - component: {fileID: 6440513540129220512}
   m_Layer: 0
-  m_Name: 'Potion of invincibility '
+  m_Name: Potion of invincibility
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

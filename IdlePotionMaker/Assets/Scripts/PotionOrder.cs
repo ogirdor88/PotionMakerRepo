@@ -77,7 +77,7 @@ public class PotionOrder : MonoBehaviour
 
     private void CheckOrder(string potionName)
     {
-        Debug.Log("Beep");
+        //Debug.Log("Beep");
         if(potionName == PotionName+"(Clone)")
         {
             correctOrder = true;
