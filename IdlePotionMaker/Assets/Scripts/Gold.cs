@@ -17,9 +17,14 @@ public class Gold : MonoBehaviour
 
     }
 
-    void OnTriggerEnter3D(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        GoldCounter.instance.IncreaseGold(value);
+        if (other.gameObject.CompareTag("Potion"))
+        {
+            value = 15;
+            GoldCounter.instance.IncreaseGold(value);
+        }
+        
     }
 
 }
