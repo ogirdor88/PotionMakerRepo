@@ -27,5 +27,12 @@ public class GoldCounter : MonoBehaviour
         currentCount += v;
         goldText.text = "Gold: " + currentCount.ToString();
     }
+
+    //take  money away when buying items
+    public void DecreaseGold(int cost)
+    {
+        currentCount -= cost;
+        goldText.text = "Gold: " + currentCount.ToString();
+    }
    
 }
