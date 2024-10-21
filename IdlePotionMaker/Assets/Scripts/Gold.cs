@@ -21,7 +21,7 @@ public class Gold : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Potion"))
         {
-            value = 15;
+            value = 25;
             GoldCounter.instance.IncreaseGold(value);
         }
         
