@@ -17,6 +17,9 @@ public class Cauldron : MonoBehaviour
     public GameObject potion1;
     public GameObject potion2;
     public GameObject potion3;
+    public GameObject potion4;
+    public GameObject potion5;
+    public GameObject potion6;
 
     private bool spawnPotion;
     private bool brewing;
@@ -103,6 +106,7 @@ public class Cauldron : MonoBehaviour
         //Debug.Log(ingOne);
         //Debug.Log(ingTwo);
 
+        // Basalisc Tooth + Basalisc Tooth = Haggeling Potion
         if(ingOne == "Basalisk_Fang(Clone)" && ingTwo == "Basalisk_Fang(Clone)")
         {
             GameObject newpo = Instantiate(potion1);
@@ -110,6 +114,7 @@ public class Cauldron : MonoBehaviour
             ings.Clear();
         }
 
+        // Dragon Scales + Dragon Scales = Strength Potion
         if(ingOne == "Scales(Clone)" && ingTwo == "Scales(Clone)")
         {
             GameObject newpo = Instantiate(potion2);
@@ -117,6 +122,7 @@ public class Cauldron : MonoBehaviour
             ings.Clear();
         }
 
+        // Basilisk Tooth  + Dragon Scales or Dragon Scales + Basalisc Tooth = Invincibility potion
         if ((ingOne == "Scales(Clone)" && ingTwo == "Basalisk_Fang(Clone)") || (ingOne == "Basalisk_Fang(Clone)" && ingTwo == "Scales(Clone)"))
         {
             GameObject newpo = Instantiate(potion3);
@@ -124,7 +130,29 @@ public class Cauldron : MonoBehaviour
             ings.Clear();
         }
 
+        // Unicorn Horn + Unicorn Horn = Invisibility Potion
+        if(ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Unicorn_Horn(Clone)")
+        {
+            GameObject newpo = Instantiate(potion4);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
 
+        // Dragon Scales + Unicorn Horn or Unicorn Horn + Dragon Scales = Merging Potion
+        if((ingOne == "Scales(Clone)" && ingTwo == "Unicorn_Horn(Clone)") || (ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Scales(Clone)"))
+        {
+            GameObject newpo = Instantiate(potion5);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
+
+        // Basalisc Tooth + Unicorn Horn or Unicorn Horn + Basilisk Tooth = Potion of Speed
+        if ((ingOne == "Basalisk_Fang(Clone)" && ingTwo == "Unicorn_Horn(Clone)") || (ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Basalisk_Fang(Clone)"))
+        {
+            GameObject newpo = Instantiate(potion6);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
     }
 
     private void ChangeText()

@@ -129,6 +129,9 @@ MonoBehaviour:
   potion1: {fileID: 5319644617665651848, guid: caa6a5d3659070e46ade0d900fc82461, type: 3}
   potion2: {fileID: 3348909458598418230, guid: cb85fc8b2f066cd42b9c1375877de56f, type: 3}
   potion3: {fileID: 6764311999962296071, guid: 35f0b5b3dcea97b49a4db87abec839aa, type: 3}
+  potion4: {fileID: 1036955366685921824, guid: 7b512c5f90541bb498f4ad0e76f50df2, type: 3}
+  potion5: {fileID: 7224969984789006964, guid: efee73004fce76e4990234c0253451d3, type: 3}
+  potion6: {fileID: 2125795868726423349, guid: 7265d986563ddd041972c6b72c5af4b9, type: 3}
 --- !u!135 &4145584447897097033
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &358388810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -561, y: -25}
+  m_AnchoredPosition: {x: -430.59, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &589191864
@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 492, y: -25}
+  m_AnchoredPosition: {x: 340.6, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &704445276
@@ -878,6 +878,9 @@ MonoBehaviour:
   potion1: {fileID: 5319644617665651848, guid: caa6a5d3659070e46ade0d900fc82461, type: 3}
   potion2: {fileID: 3348909458598418230, guid: cb85fc8b2f066cd42b9c1375877de56f, type: 3}
   potion3: {fileID: 6764311999962296071, guid: 35f0b5b3dcea97b49a4db87abec839aa, type: 3}
+  potion4: {fileID: 0}
+  potion5: {fileID: 0}
+  potion6: {fileID: 0}
 --- !u!136 &916761248
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1879,8 +1882,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 300}
-  m_SizeDelta: {x: 445.4, y: 273.7}
+  m_AnchoredPosition: {x: 750, y: 125}
+  m_SizeDelta: {x: 445.4, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531307549
 MonoBehaviour:
@@ -1917,7 +1920,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Basalisk Tooth + Basalisk Tooth - Potion of Haggeling \n\nDragon scale
     + dragon Scale - Potion of strength\n\nBasalisk Tooth + Dragon scale - Potion
-    of invincibility "
+    of invincibility \n\nUnicorn Horn + Basilisk Tooth - Potion of Speed\r\n\r\nUnicorn
+    Horn + Dragon Scales - Merging Potion\r\n\r\nUnicorn Horn + Unicorn Horn - Invisibility
+    Potion\r\n"
 --- !u!222 &1531307550
 CanvasRenderer:
   m_ObjectHideFlags: 0
