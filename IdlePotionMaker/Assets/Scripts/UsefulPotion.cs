@@ -11,8 +11,8 @@ public class UsefulPotion : MonoBehaviour
     [SerializeField]
     private float effectTime;
 
-    private bool speedup;
-    private bool profit;
+    public static bool speedup;
+    public static bool profit;
 
     private float clicks;
     private float clickTime;

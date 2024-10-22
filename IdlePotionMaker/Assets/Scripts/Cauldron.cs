@@ -10,7 +10,7 @@ public class Cauldron : MonoBehaviour
     private bool full;
 
     public Text brewtext;
-    private float brewTime;
+    public float brewTime;
 
     private float maxTime;
 
@@ -29,6 +29,10 @@ public class Cauldron : MonoBehaviour
 
     private Vector3 spawnPosition;
 
+    public bool chef;
+
+    private bool togglep;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,15 +44,31 @@ public class Cauldron : MonoBehaviour
         spawnPosition =  new Vector3(this.transform.position.x, this.transform.position.y + 2.0f, this.transform.position.z);
         maxTime = brewTime;
         brewing = false;
+        togglep = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        chef = UsefulPotion.speedup;
         if (ingredients == 2)
         {
             Brewing();
             spawnPotion = true;
+        }
+
+        if (chef == true)
+        {
+            maxTime = 5;
+            if(togglep == false)
+            {
+                StartCoroutine(ToggleSpeed());
+            }
+        }
+        if(chef == false)
+        {
+            togglep = false;
+            brewTime = 10;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -73,10 +93,16 @@ public class Cauldron : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
+    private IEnumerator ToggleSpeed()
+    {
+        //Debug.Log("minus" + brewTime);
+        brewTime = maxTime;
+        togglep= true;
+        yield return new WaitForSeconds(1f);
+    }
+
     private void Brewing()
     {
-        //if (ingredients == 2)
-        //{
         brewing = true;
         ChangeText();
         if( brewTime > 0) 
@@ -95,7 +121,6 @@ public class Cauldron : MonoBehaviour
             }
             brewing= false;
         }
-        //}
     }
 
     private void CheckPotion()

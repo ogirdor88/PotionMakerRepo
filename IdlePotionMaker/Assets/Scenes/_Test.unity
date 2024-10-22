@@ -2380,6 +2380,74 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &2042246555
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808987784972229272, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1036955366685921824, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_Name
+      value: Invisibility Potion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b512c5f90541bb498f4ad0e76f50df2, type: 3}
 --- !u!23 &705703464838305744
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2714,3 +2782,4 @@ SceneRoots:
   - {fileID: 695846742}
   - {fileID: 6711050025456413022}
   - {fileID: 1542185498}
+  - {fileID: 2042246555}
