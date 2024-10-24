@@ -19,20 +19,20 @@ public class GoldCounter : MonoBehaviour
 
     void Start()
     {
-        goldText.text = "Gold: " + currentCount.ToString();
+        goldText.text = "Gold: $" + currentCount.ToString();
     }
 
     public void IncreaseGold(int v)
     {
         currentCount += v;
-        goldText.text = "Gold: " + currentCount.ToString();
+        goldText.text = "Gold: $" + currentCount.ToString();
     }
 
     //take  money away when buying items
     public void DecreaseGold(int cost)
     {
         currentCount -= cost;
-        goldText.text = "Gold: " + currentCount.ToString();
+        goldText.text = "Gold: $" + currentCount.ToString();
     }
    
 }
