@@ -68,7 +68,7 @@ public class Cauldron : MonoBehaviour
         if(chef == false)
         {
             togglep = false;
-            brewTime = 10;
+            maxTime = 10;
         }
     }
     private void OnTriggerEnter(Collider other)
