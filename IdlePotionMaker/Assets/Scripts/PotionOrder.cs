@@ -10,7 +10,7 @@ public class PotionOrder : MonoBehaviour
     string PotionName;
 
     private bool readyOrder;
-    private bool correctOrder;
+    public bool correctOrder;
 
     // Start is called before the first frame update
     void Start()
