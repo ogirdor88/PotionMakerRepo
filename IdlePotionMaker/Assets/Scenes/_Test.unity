@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33655202, g: 0.8161745, b: 0.9302482, a: 1}
+  m_IndirectSpecularColor: {r: 0.33643007, g: 0.81589735, b: 0.9303157, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2611,6 +2611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Invisibility Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922554991760868902, guid: 7b512c5f90541bb498f4ad0e76f50df2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

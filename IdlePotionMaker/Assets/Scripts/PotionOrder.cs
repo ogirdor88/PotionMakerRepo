@@ -33,9 +33,10 @@ public class PotionOrder : MonoBehaviour
             CheckOrder(potionName);
             if (correctOrder)
             {
+                //StartCoroutine(DeleteDelay(other.gameObject));
                 Destroy(other.gameObject);
                 readyOrder = false;
-                correctOrder=false;
+                StartCoroutine(ResetDelay());
             }
             
         }
@@ -81,6 +82,14 @@ public class PotionOrder : MonoBehaviour
         if(potionName == PotionName+"(Clone)")
         {
             correctOrder = true;
+            Debug.Log("correct");
         }
     }
+
+    private IEnumerator ResetDelay()
+    {
+        yield return new WaitForSeconds(2);
+        correctOrder = false;
+    }
+    
 }

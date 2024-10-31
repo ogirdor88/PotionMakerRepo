@@ -7,8 +7,6 @@ public class Gold : MonoBehaviour
     public int value;
 
     public bool sale;
-
-    private bool checkOrder;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,28 +17,21 @@ public class Gold : MonoBehaviour
     void Update()
     {
         sale = UsefulPotion.profit;
-        checkOrder = this.gameObject.GetComponent<PotionOrder>().correctOrder;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Potion"))
+        if (other.gameObject.CompareTag("Potion") && gameObject.GetComponent<PotionOrder>().correctOrder == true)
         {
             if (sale)
             {
-                if (checkOrder)
-                {
-                    value = 25 * 2;
-                    GoldCounter.instance.IncreaseGold(value);
-                }              
+                value = 25 * 2;
+                GoldCounter.instance.IncreaseGold(value);            
             }
             else 
             {
-                if (checkOrder) 
-                {
-                    value = 25;
-                    GoldCounter.instance.IncreaseGold(value);
-                }
+                value = 25;
+                GoldCounter.instance.IncreaseGold(value);
             }
         }
         
