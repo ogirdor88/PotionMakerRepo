@@ -386,7 +386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipes: {fileID: 1380680288}
-  isEnabled: 1
 --- !u!114 &230004158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1518,7 +1517,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipes: {fileID: 1380680288}
-  isEnabled: 1
 --- !u!114 &729414918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3676,7 +3674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1380680289
 RectTransform:
   m_ObjectHideFlags: 0

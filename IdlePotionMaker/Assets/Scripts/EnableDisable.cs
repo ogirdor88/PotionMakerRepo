@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class EnableDisable : MonoBehaviour
 {
     public GameObject recipes;
-    public bool isEnabled = true;
-    public void Awake()
+    private bool isEnabled = false;
+
+    public void Start()
     {
-        recipes.SetActive(!isEnabled);
+        recipes.SetActive(isEnabled);
     }
+
     public void ButtonClicked()
     {
         isEnabled = !isEnabled;
