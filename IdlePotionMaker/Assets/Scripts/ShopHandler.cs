@@ -15,16 +15,8 @@ public class ShopHandler : MonoBehaviour
     [SerializeField]
     private Button cbutton, hbutton, tbutton, ebutton, dbutton;
 
-    private bool csold, hsold, tsold, esold, dsold, upgrade, displayPopUp, resetPop;
-
-    [SerializeField]
-    private GameObject popUp;
-    [SerializeField]
-    private Image background;
-    [SerializeField]
-    private TMP_Text popupText;
-
-    private Color backgroundColor, textColor;
+    private bool csold, hsold, tsold, esold, dsold, upgrade;
+    public static bool displayPopUp;
 
     public static bool inShop;
 
@@ -38,23 +30,12 @@ public class ShopHandler : MonoBehaviour
         esold = false;
         dsold = false;
         upgrade = false;
-        resetPop = false;
         displayPopUp = false;
-        popUp.SetActive(false);
-        backgroundColor = background.color;
-        textColor = popupText.color;
     }
 
     // Update is called once per frame
     void Update()
     {
-        background.color = backgroundColor;
-        popupText.color = textColor;
-        if (displayPopUp) 
-        {
-            BrokePopUp();
-        }
-
         if (inShop)
         {
             shopUI.SetActive(true);
@@ -170,36 +151,6 @@ public class ShopHandler : MonoBehaviour
         if (GoldCounter.instance.currentCount >= value) 
         {
             upgrade = true;
-        }
-    }
-
-    private void ResetPopUp()
-    {
-        backgroundColor.a = 1;
-        textColor.a = 1;
-    }
-
-    private IEnumerator PopUp()
-    {
-        yield return new WaitForSeconds(0.1f);
-        backgroundColor.a = backgroundColor.a - 0.5f * Time.deltaTime;
-        textColor.a = textColor.a - 0.5f * Time.deltaTime;
-    }
-
-    private void BrokePopUp()
-    {
-        popUp.SetActive(true);
-        if (!resetPop)
-        {
-            ResetPopUp();
-        }
-        resetPop = true;
-        StartCoroutine(PopUp());
-        if (backgroundColor.a <= 0 && textColor.a <= 0)
-        {
-            resetPop = false;
-            displayPopUp = false;
-            popUp.SetActive(false);
         }
     }
 }
