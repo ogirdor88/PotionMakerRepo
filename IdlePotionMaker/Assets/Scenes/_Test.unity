@@ -416,7 +416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 76689466}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1444942866}
+        m_TargetAssemblyTypeName: ShopHandler, Assembly-CSharp
+        m_MethodName: OrcButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &76689466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,7 +991,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 342873614}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1444942866}
+        m_TargetAssemblyTypeName: ShopHandler, Assembly-CSharp
+        m_MethodName: DungButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &342873614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,7 +1505,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 650876639}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1444942866}
+        m_TargetAssemblyTypeName: ShopHandler, Assembly-CSharp
+        m_MethodName: CauldronButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &650876639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3085,7 +3121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 961223092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1444942866}
+        m_TargetAssemblyTypeName: ShopHandler, Assembly-CSharp
+        m_MethodName: UnicornButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &961223092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3720,7 +3768,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1209513486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1444942866}
+        m_TargetAssemblyTypeName: ShopHandler, Assembly-CSharp
+        m_MethodName: TrollButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1209513486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4273,6 +4333,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopUI: {fileID: 437600357}
+  c1: {fileID: 722423600}
+  c2: {fileID: 79392732}
+  c3: {fileID: 1132616145}
+  c4: {fileID: 904436953}
+  c5: {fileID: 1296139224}
+  cauldron: {fileID: 2071853004}
+  horn: {fileID: 237192172}
+  toe: {fileID: 731278221}
+  ear: {fileID: 476174442}
+  dung: {fileID: 136642432}
+  cbutton: {fileID: 650876638}
+  hbutton: {fileID: 961223091}
+  tbutton: {fileID: 1209513485}
+  ebutton: {fileID: 76689465}
+  dbutton: {fileID: 342873613}
 --- !u!1 &1451542718
 GameObject:
   m_ObjectHideFlags: 0
