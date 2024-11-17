@@ -15,10 +15,9 @@ public class ShopHandler : MonoBehaviour
     [SerializeField]
     private Button cbutton, hbutton, tbutton, ebutton, dbutton;
 
-    private bool csold, hsold, tsold, esold, dsold, upgrade;
-    public static bool displayPopUp;
+    private bool upgrade;
 
-    public static bool inShop;
+    public static bool inShop, displayPopUp, csold, hsold, tsold, esold, dsold;
 
     // Start is called before the first frame update
     void Start()
