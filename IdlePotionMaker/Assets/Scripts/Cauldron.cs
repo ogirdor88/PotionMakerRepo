@@ -223,7 +223,7 @@ public class Cauldron : MonoBehaviour
             GameObject newpo = Instantiate(potion11);
             newpo.transform.position = spawnPosition;
             ings.Clear();
-        }
+        }   
 
         // ANY COMBINATION THAT DOES NOT EXIST = FAILED POTION
         else
