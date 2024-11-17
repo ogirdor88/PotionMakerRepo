@@ -20,11 +20,11 @@ public class Cauldron : MonoBehaviour
     public GameObject potion4;
     public GameObject potion5;
     public GameObject potion6;
-    /*public GameObject potion7;
+    public GameObject potion7;
     public GameObject potion8;    
     public GameObject potion9;
     public GameObject potion10;
-    public GameObject potion11;*/
+    public GameObject potion11;
     public GameObject trashPotion;
 
     private bool spawnPotion;
@@ -184,46 +184,46 @@ public class Cauldron : MonoBehaviour
             newpo.transform.position = spawnPosition;
             ings.Clear();
         }
-        /*
-                // Troll Toe + Troll Toe = Potion of Flight
-                else if (ingOne == "Troll_toe(Clone)" && ingTwo == "Troll_toe(Clone)")
-                {
-                    GameObject newpo = Instantiate(potion7);
-                    newpo.transform.position = spawnPosition;
-                    ings.Clear();
-                }
 
-                // Troll Toe + Unicorn Horn or Unicorn Horn + Troll Toe = Potion of Night Vision
-                else if ((ingOne == "Troll_toe(Clone)" && ingTwo == "Unicorn_Horn(Clone)") || (ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Troll_toe(Clone)"))
-                {
-                    GameObject newpo = Instantiate(potion8);
-                    newpo.transform.position = spawnPosition;
-                    ings.Clear();
-                }
+        // Troll Toe + Troll Toe = Potion of Flight
+        else if (ingOne == "Troll_toe(Clone)" && ingTwo == "Troll_toe(Clone)")
+        {
+            GameObject newpo = Instantiate(potion7);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
 
-                // Troll Toe + Dragon Dung or Dragon Dung + Troll Toe = Potion Of Telepathy
-                else if ((ingOne == "Troll_toe(Clone)" && ingTwo == "Dragon_Dung(Clone)") || (ingOne == "Dragon_Dung(Clone)" && ingTwo == "Troll_toe(Clone)"))
-                {
-                    GameObject newpo = Instantiate(potion9);
-                    newpo.transform.position = spawnPosition;
-                    ings.Clear();
-                }
+        // Troll Toe + Unicorn Horn or Unicorn Horn + Troll Toe = Potion of Night Vision
+        else if ((ingOne == "Troll_toe(Clone)" && ingTwo == "Unicorn_Horn(Clone)") || (ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Troll_toe(Clone)"))
+        {
+            GameObject newpo = Instantiate(potion8);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
 
-                // Fairy Wings + Dragon Dung Or Dragon Dung + Fairy Wings = Potion of Persuasion
-                else if ((ingOne == "Fairy_Wings(Clone)" && ingTwo == "Dragon_Dung(Clone)") || (ingOne == "Dragon_Dung(Clone)" && ingTwo == "Fairy_Wings(Clone)"))
-                {
-                    GameObject newpo = Instantiate(potion10);
-                    newpo.transform.position = spawnPosition;
-                    ings.Clear();
-                }
+        // Troll Toe + Dragon Dung or Dragon Dung + Troll Toe = Potion Of Telepathy
+        else if ((ingOne == "Troll_toe(Clone)" && ingTwo == "Dragon_Dung(Clone)") || (ingOne == "Dragon_Dung(Clone)" && ingTwo == "Troll_toe(Clone)"))
+        {
+            GameObject newpo = Instantiate(potion9);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
 
-                // Fairy Wings + Troll Toe Or Troll Toe + Fairy Wings = Potion of Levitation
-                else if ((ingOne == "Fairy_Wings(Clone)" && ingTwo == "Troll_toe(Clone)") || (ingOne == "Troll_toe(Clone)" && ingTwo == "Fairy_Wings(Clone)"))
-                {
-                    GameObject newpo = Instantiate(potion11);
-                    newpo.transform.position = spawnPosition;
-                    ings.Clear();
-                }*/
+        // Fairy Wings + Dragon Dung Or Dragon Dung + Fairy Wings = Potion of Persuasion
+        else if ((ingOne == "Fairy_Wings(Clone)" && ingTwo == "Dragon_Dung(Clone)") || (ingOne == "Dragon_Dung(Clone)" && ingTwo == "Fairy_Wings(Clone)"))
+        {
+            GameObject newpo = Instantiate(potion10);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
+
+        // Fairy Wings + Troll Toe Or Troll Toe + Fairy Wings = Potion of Levitation
+        else if ((ingOne == "Fairy_Wings(Clone)" && ingTwo == "Troll_toe(Clone)") || (ingOne == "Troll_toe(Clone)" && ingTwo == "Fairy_Wings(Clone)"))
+        {
+            GameObject newpo = Instantiate(potion11);
+            newpo.transform.position = spawnPosition;
+            ings.Clear();
+        }
 
         // ANY COMBINATION THAT DOES NOT EXIST = FAILED POTION
         else
