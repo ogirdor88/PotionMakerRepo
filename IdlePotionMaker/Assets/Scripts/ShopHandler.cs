@@ -19,6 +19,9 @@ public class ShopHandler : MonoBehaviour
 
     public static bool inShop, displayPopUp, csold, hsold, tsold, esold, dsold;
 
+    [SerializeField]
+    private GameObject UniHorn, TroToe, OrcEar, DragDung;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,10 @@ public class ShopHandler : MonoBehaviour
         dsold = false;
         upgrade = false;
         displayPopUp = false;
+        UniHorn.SetActive(false);
+        TroToe.SetActive(false);
+        OrcEar.SetActive(false);
+        DragDung.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,6 +50,8 @@ public class ShopHandler : MonoBehaviour
         {
             shopUI.SetActive(false);
         }
+
+        IngredientsCheck();
     }
 
     public void ShopToggle()
@@ -151,5 +160,33 @@ public class ShopHandler : MonoBehaviour
         {
             upgrade = true;
         }
+    }
+
+    private void IngredientsCheck()
+    {
+        if(csold == true)
+        {
+            Debug.Log("work in progress");
+        }
+        if(hsold == true)
+        {
+            UniHorn.SetActive(true);
+        }
+        if(tsold == true)
+        {
+            TroToe.SetActive(true);
+        }
+        if(esold == true)
+        {
+            OrcEar.SetActive(true);
+        }
+        if(dsold == true)
+        {
+            DragDung.SetActive(true);
+        }
+        
+        
+        
+        
     }
 }

@@ -1290,7 +1290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &358388810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2242,7 +2242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &766866603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5161,6 +5161,10 @@ MonoBehaviour:
   tbutton: {fileID: 1209513485}
   ebutton: {fileID: 76689465}
   dbutton: {fileID: 342873613}
+  UniHorn: {fileID: 1493521320}
+  TroToe: {fileID: 358388809}
+  OrcEar: {fileID: 1575871223}
+  DragDung: {fileID: 766866602}
 --- !u!114 &1444942867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5368,7 +5372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1493521321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5878,7 +5882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1575871224
 MonoBehaviour:
   m_ObjectHideFlags: 0
