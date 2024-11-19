@@ -11,16 +11,19 @@ public class ShopHandler : MonoBehaviour
     [SerializeField]
     private GameObject c1, c2, c3, c4, c5;
     [SerializeField]
-    private TMP_Text cauldron, horn, toe, ear, dung;
+    private TMP_Text cauldron, horn, toe, ear, dung, hornRecipes, toeRecipes, nitVisRecipe, teleRecipe, preRecipe, levRecipe;
     [SerializeField]
     private Button cbutton, hbutton, tbutton, ebutton, dbutton;
 
-    private bool upgrade;
+    private bool upgrade , recipes;
 
     public static bool inShop, displayPopUp, csold, hsold, tsold, esold, dsold;
 
     [SerializeField]
-    private GameObject UniHorn, TroToe, OrcEar, DragDung;
+    private Text hPrice, tPrice, ePrice, dPrice;
+
+    [SerializeField]
+    private GameObject UniHorn, TroToe, OrcEar, DragDung, recipeBook;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +40,18 @@ public class ShopHandler : MonoBehaviour
         TroToe.SetActive(false);
         OrcEar.SetActive(false);
         DragDung.SetActive(false);
+        hPrice.enabled = false;
+        tPrice.enabled = false;
+        ePrice.enabled = false;
+        dPrice.enabled = false;
+        hornRecipes.enabled = false;
+        toeRecipes.enabled = false;
+        nitVisRecipe.enabled = false;
+        teleRecipe.enabled = false;
+        preRecipe.enabled = false;
+        levRecipe.enabled = false;
+        recipes = false;
+        recipeBook.SetActive(false);
     }
 
     // Update is called once per frame
@@ -171,22 +186,50 @@ public class ShopHandler : MonoBehaviour
         if(hsold == true)
         {
             UniHorn.SetActive(true);
+            hPrice.enabled = true;
+            hornRecipes.enabled = true;
         }
         if(tsold == true)
         {
             TroToe.SetActive(true);
+            tPrice.enabled = true;
+            toeRecipes.enabled = true;
         }
         if(esold == true)
         {
             OrcEar.SetActive(true);
+            ePrice.enabled = true;
         }
         if(dsold == true)
         {
             DragDung.SetActive(true);
+            dPrice.enabled = true;
         }
-        
-        
-        
-        
+
+        if (tsold == true && hsold == true)
+        {
+            nitVisRecipe.enabled = true;
+        }
+
+        if (tsold == true && dsold == true)
+        {
+            teleRecipe.enabled = true;
+        }
+        if (esold == true && dsold == true)
+        {
+            preRecipe.enabled = true;
+        }
+        if (tsold == true && esold == true)
+        {
+            levRecipe.enabled = true;
+        } 
+
+    }
+
+
+    public void RecipeButton()
+    {
+        recipes = !recipes;
+        recipeBook.SetActive(recipes);
     }
 }

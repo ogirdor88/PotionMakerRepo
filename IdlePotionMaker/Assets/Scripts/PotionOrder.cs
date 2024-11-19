@@ -49,7 +49,7 @@ public class PotionOrder : MonoBehaviour
 
     private void RandomPotion()
     {
-        int randNum = Random.Range(0, 3);
+        int randNum = ReRoll();
 
         switch (randNum) 
         {
@@ -62,7 +62,94 @@ public class PotionOrder : MonoBehaviour
             case 2:
                 PotionName = "Potion of Haggeling";
                 break;
+            case 3:
+                if(ShopHandler.hsold == true)
+                {
+                    PotionName = "Potion of Invisibility";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
+            case 4:
+                if (ShopHandler.hsold == true)
+                {
+                    PotionName = "Potion of Merging";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
+            case 5:
+                if (ShopHandler.hsold == true)
+                {
+                    PotionName = "Potion of Speed";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
+            case 6:
+                if (ShopHandler.tsold == true)
+                {
+                    PotionName = "Potion of Flight";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
+            case 7:
+                if (ShopHandler.tsold == true && ShopHandler.hsold == true)
+                {
+                    PotionName = "Potion of Night Vision";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
+            case 8:
+                if (ShopHandler.tsold == true && ShopHandler.dsold == true)
+                {
+                    PotionName = "Potion of Telepathy";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
+            case 9:
+                if (ShopHandler.esold == true && ShopHandler.dsold == true)
+                {
+                    PotionName = "Potion of Persuasion";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
+            case 10:
+                if (ShopHandler.esold == true && ShopHandler.tsold == true)
+                {
+                    PotionName = "Potion of Levitation";
+                }
+                else
+                {
+                    RandomPotion();
+                }
+                break;
         }
+    }
+
+    private int ReRoll()
+    {
+        int value;
+         value = Random.Range(0, 12);
+        return value;
     }
 
     private void OrderUp()

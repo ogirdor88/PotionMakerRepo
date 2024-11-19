@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8487238936751345014}
   - component: {fileID: 2820560400808454345}
   m_Layer: 0
-  m_Name: Invisibility Potion
+  m_Name: Potion of Invisibility
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

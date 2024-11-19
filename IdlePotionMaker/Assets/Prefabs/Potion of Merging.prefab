@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4728630466128031010}
   - component: {fileID: 3903614135856089317}
   m_Layer: 0
-  m_Name: Merging Potion
+  m_Name: Potion of Merging
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
