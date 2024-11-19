@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class ShopHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject shopUI;
+    private GameObject shopUI, hornRecipes;
     [SerializeField]
     private GameObject c1, c2, c3, c4, c5;
     [SerializeField]
-    private TMP_Text cauldron, horn, toe, ear, dung, hornRecipes, toeRecipes, nitVisRecipe, teleRecipe, preRecipe, levRecipe;
+    private TMP_Text cauldron, horn, toe, ear, dung, toeRecipes, nitVisRecipe, teleRecipe, preRecipe, levRecipe;
     [SerializeField]
     private Button cbutton, hbutton, tbutton, ebutton, dbutton;
 
@@ -44,7 +44,7 @@ public class ShopHandler : MonoBehaviour
         tPrice.enabled = false;
         ePrice.enabled = false;
         dPrice.enabled = false;
-        hornRecipes.enabled = false;
+        hornRecipes.SetActive(false);
         toeRecipes.enabled = false;
         nitVisRecipe.enabled = false;
         teleRecipe.enabled = false;
@@ -187,7 +187,7 @@ public class ShopHandler : MonoBehaviour
         {
             UniHorn.SetActive(true);
             hPrice.enabled = true;
-            hornRecipes.enabled = true;
+            hornRecipes.SetActive(true);
         }
         if(tsold == true)
         {
