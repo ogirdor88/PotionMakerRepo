@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class ShopHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject shopUI, hornRecipes;
+    private GameObject shopUI;
     [SerializeField]
     private GameObject c1, c2, c3, c4, c5;
     [SerializeField]
-    private TMP_Text cauldron, horn, toe, ear, dung, toeRecipes, nitVisRecipe, teleRecipe, preRecipe, levRecipe;
+    private TMP_Text cauldron, horn, toe, ear, dung, speedRecipe, mergeRecipe, invisRecipe, flyRecipe, nitVisRecipe, teleRecipe, preRecipe, levRecipe;
     [SerializeField]
     private Button cbutton, hbutton, tbutton, ebutton, dbutton;
 
@@ -44,8 +44,10 @@ public class ShopHandler : MonoBehaviour
         tPrice.enabled = false;
         ePrice.enabled = false;
         dPrice.enabled = false;
-        hornRecipes.SetActive(false);
-        toeRecipes.enabled = false;
+        speedRecipe.enabled = false;
+        mergeRecipe.enabled = false;
+        invisRecipe.enabled = false;
+        flyRecipe.enabled = false;
         nitVisRecipe.enabled = false;
         teleRecipe.enabled = false;
         preRecipe.enabled = false;
@@ -187,43 +189,37 @@ public class ShopHandler : MonoBehaviour
         {
             UniHorn.SetActive(true);
             hPrice.enabled = true;
-            hornRecipes.SetActive(true);
+            speedRecipe.enabled = true;
+            invisRecipe.enabled = true;
+            
         }
         if(tsold == true)
         {
             TroToe.SetActive(true);
             tPrice.enabled = true;
-            toeRecipes.enabled = true;
+            flyRecipe.enabled = true;
+            nitVisRecipe.enabled = true;
         }
         if(esold == true)
         {
             OrcEar.SetActive(true);
             ePrice.enabled = true;
+            preRecipe.enabled = true;
         }
         if(dsold == true)
         {
             DragDung.SetActive(true);
             dPrice.enabled = true;
-        }
-
-        if (tsold == true && hsold == true)
-        {
-            nitVisRecipe.enabled = true;
-        }
-
-        if (tsold == true && dsold == true)
-        {
             teleRecipe.enabled = true;
         }
-        if (esold == true && dsold == true)
+        if (hsold == true && dsold == true)
         {
-            preRecipe.enabled = true;
+            mergeRecipe.enabled = true;
         }
-        if (tsold == true && esold == true)
+        if (esold == true && tsold == true)
         {
             levRecipe.enabled = true;
-        } 
-
+        }
     }
 
 
