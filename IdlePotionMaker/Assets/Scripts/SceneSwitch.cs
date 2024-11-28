@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    public int sceneId;
+    public GameObject startScreen, CreditScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,23 +18,20 @@ public class SceneSwitch : MonoBehaviour
     {
         
     }
-    public void ExitButton()
+    public void XButton()
     {
-        Application.Quit();
+        startScreen.SetActive(true);
+        CreditScreen.SetActive(false);
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(2);
-    }
-
-    public void HelpButton()
-    {
         SceneManager.LoadScene(1);
     }
 
-    public void MenuButton()
+    public void creditsButton()
     {
-        SceneManager.LoadScene(0);
+        startScreen.SetActive(false);
+        CreditScreen.SetActive(true);
     }
 }
