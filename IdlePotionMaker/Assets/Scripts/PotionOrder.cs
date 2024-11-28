@@ -12,17 +12,28 @@ public class PotionOrder : MonoBehaviour
     private bool readyOrder;
     public bool correctOrder;
 
+    private List<string> orders;
+
+    private bool updateList;
+    private int lastnum;
+
     // Start is called before the first frame update
     void Start()
     {
         readyOrder = false;
         correctOrder = false;
+        orders = new List<string>();
+        lastnum = 0;
+        orders.Add("Potion of invincibility");
+        orders.Add("Potion of strength");
+        orders.Add("Potion of Haggeling");
     }
 
     // Update is called once per frame
     void Update()
     {
         OrderUp();
+        Debug.Log( "orders in list" + orders.Count);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,7 +44,6 @@ public class PotionOrder : MonoBehaviour
             CheckOrder(potionName);
             if (correctOrder)
             {
-                //StartCoroutine(DeleteDelay(other.gameObject));
                 Destroy(other.gameObject);
                 readyOrder = false;
                 StartCoroutine(ResetDelay());
@@ -49,9 +59,19 @@ public class PotionOrder : MonoBehaviour
 
     private void RandomPotion()
     {
+        //get a random nunmber
         int randNum = ReRoll();
 
-        switch (randNum) 
+        //if the random number is not the same as the last number change the potion and make ready order true;
+        if (randNum != lastnum)
+        {
+            //store the random number
+            lastnum = randNum;
+            PotionName = orders[randNum];
+            readyOrder = true;
+        }
+
+        /*switch (randNum) 
         {
             case 0:
                 PotionName = "Potion of invincibility";
@@ -142,13 +162,13 @@ public class PotionOrder : MonoBehaviour
                     RandomPotion();
                 }
                 break;
-        }
+        }*/
     }
 
     private int ReRoll()
     {
         int value;
-         value = Random.Range(0, 12);
+         value = Random.Range(0, orders.Count+1);
         return value;
     }
 
@@ -158,7 +178,6 @@ public class PotionOrder : MonoBehaviour
         if (!readyOrder) 
         {
             RandomPotion();
-            readyOrder = true;
         } 
         ChangeText();
     }
