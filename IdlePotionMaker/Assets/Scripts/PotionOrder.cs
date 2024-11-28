@@ -9,7 +9,7 @@ public class PotionOrder : MonoBehaviour
     public Text Ordertext;
     string PotionName;
 
-    private bool readyOrder;
+    private bool readyOrder , hUp, tUp, eUp, dUp, mUp, lUp;
     public bool correctOrder;
 
     private List<string> orders;
@@ -27,6 +27,12 @@ public class PotionOrder : MonoBehaviour
         orders.Add("Potion of invincibility");
         orders.Add("Potion of strength");
         orders.Add("Potion of Haggeling");
+        hUp = false;
+        tUp = false;
+        dUp = false;
+        eUp = false;
+        mUp = false;
+        lUp = false;
     }
 
     // Update is called once per frame
@@ -59,6 +65,9 @@ public class PotionOrder : MonoBehaviour
 
     private void RandomPotion()
     {
+        //check to see if any potions need to be added to the list
+        UpdatePotions();
+
         //get a random nunmber
         int randNum = ReRoll();
 
@@ -70,105 +79,66 @@ public class PotionOrder : MonoBehaviour
             PotionName = orders[randNum];
             readyOrder = true;
         }
-
-        /*switch (randNum) 
-        {
-            case 0:
-                PotionName = "Potion of invincibility";
-                break;
-            case 1:
-                PotionName = "Potion of strength";
-                break;   
-            case 2:
-                PotionName = "Potion of Haggeling";
-                break;
-            case 3:
-                if(ShopHandler.hsold == true)
-                {
-                    PotionName = "Potion of Invisibility";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-            case 4:
-                if (ShopHandler.hsold == true)
-                {
-                    PotionName = "Potion of Merging";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-            case 5:
-                if (ShopHandler.hsold == true)
-                {
-                    PotionName = "Potion of Speed";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-            case 6:
-                if (ShopHandler.tsold == true)
-                {
-                    PotionName = "Potion of Flight";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-            case 7:
-                if (ShopHandler.tsold == true && ShopHandler.hsold == true)
-                {
-                    PotionName = "Potion of Night Vision";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-            case 8:
-                if (ShopHandler.tsold == true && ShopHandler.dsold == true)
-                {
-                    PotionName = "Potion of Telepathy";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-            case 9:
-                if (ShopHandler.esold == true && ShopHandler.dsold == true)
-                {
-                    PotionName = "Potion of Persuasion";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-            case 10:
-                if (ShopHandler.esold == true && ShopHandler.tsold == true)
-                {
-                    PotionName = "Potion of Levitation";
-                }
-                else
-                {
-                    RandomPotion();
-                }
-                break;
-        }*/
     }
 
+    private void UpdatePotions()
+    {
+        if (ShopHandler.hsold == true)
+        {
+            if(!hUp) 
+            {
+                orders.Add("Potion of Speed");
+                orders.Add("Potion of Invisibility");
+                hUp = true;
+            }
+        }
+        if (ShopHandler.tsold == true)
+        {
+            if (!tUp)
+            {
+                orders.Add("Potion of Flight");
+                orders.Add("Potion of Night Vision");
+                tUp= true;
+            }
+        }
+        if (ShopHandler.esold == true)
+        {
+            if (!eUp)
+            {
+                orders.Add("Potion of Persuasion");
+                eUp= true;
+            }
+        }
+        if (ShopHandler.dsold == true)
+        {
+            if (!dUp)
+            {
+                orders.Add("Potion of Telepathy");
+                dUp= true;
+            }
+        }
+
+        if (ShopHandler.dsold == true && ShopHandler.hsold == true)
+        {
+            if (!mUp)
+            {
+                orders.Add("Potion of Merging");
+                mUp = true;
+            }
+        }
+        if (ShopHandler.esold == true && ShopHandler.tsold == true)
+        {
+            if (!lUp)
+            {
+                orders.Add("Potion of Levitation");
+                lUp = true;
+            }
+        }
+    }
     private int ReRoll()
     {
         int value;
-         value = Random.Range(0, orders.Count+1);
+         value = Random.Range(0, orders.Count);
         return value;
     }
 

@@ -169,8 +169,8 @@ public class Cauldron : MonoBehaviour
             ings.Clear();
         }
 
-        // Dragon Scales + Unicorn Horn or Unicorn Horn + Dragon Scales = Merging Potion
-        else if((ingOne == "Scales(Clone)" && ingTwo == "Unicorn_Horn(Clone)") || (ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Scales(Clone)"))
+        // Dragon Dung + Unicorn Horn or Unicorn Horn + Dragon Dung = Merging Potion
+        else if((ingOne == "Dragon_dung(Clone)" && ingTwo == "Unicorn_Horn(Clone)") || (ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Dragon_dung(Clone)"))
         {
             GameObject newpo = Instantiate(potion5);
             newpo.transform.position = spawnPosition;
@@ -193,24 +193,24 @@ public class Cauldron : MonoBehaviour
             ings.Clear();
         }
 
-        // Troll Toe + Unicorn Horn or Unicorn Horn + Troll Toe = Potion of Night Vision
-        else if ((ingOne == "Troll_toe(Clone)" && ingTwo == "Unicorn_Horn(Clone)") || (ingOne == "Unicorn_Horn(Clone)" && ingTwo == "Troll_toe(Clone)"))
+        // Troll Toe + Basilisk Tooth or Basilisk Tooth + Troll Toe = Potion of Night Vision
+        else if ((ingOne == "Troll_toe(Clone)" && ingTwo == "Basalisk_Fang(Clone)") || (ingOne == "Basalisk_Fang(Clone)" && ingTwo == "Troll_toe(Clone)"))
         {
             GameObject newpo = Instantiate(potion8);
             newpo.transform.position = spawnPosition;
             ings.Clear();
         }
 
-        // Troll Toe + Dragon Dung or Dragon Dung + Troll Toe = Potion Of Telepathy
-        else if ((ingOne == "Troll_toe(Clone)" && ingTwo == "Dragon_dung(Clone)") || (ingOne == "Dragon_dung(Clone)" && ingTwo == "Troll_toe(Clone)"))
+        // Dragon Scales + Dragon Dung or Dragon Dung + Dragon Scales = Potion Of Telepathy
+        else if ((ingOne == "Scales(Clone)" && ingTwo == "Dragon_dung(Clone)") || (ingOne == "Dragon_dung(Clone)" && ingTwo == "Scales(Clone)"))
         {
             GameObject newpo = Instantiate(potion9);
             newpo.transform.position = spawnPosition;
             ings.Clear();
         }
 
-        // Orc Ears + Dragon Dung Or Dragon Dung + Orc Ears = Potion of Persuasion
-        else if ((ingOne == "Orc_ears(Clone)" && ingTwo == "Dragon_dung(Clone)") || (ingOne == "Dragon_dung(Clone)" && ingTwo == "Orc_ears(Clone)"))
+        // Orc Ears + Dragon Scales Or Dragon Scales + Orc Ears = Potion of Persuasion
+        else if ((ingOne == "Orc_ears(Clone)" && ingTwo == "Scales(Clone)") || (ingOne == "Scales(Clone)" && ingTwo == "Orc_ears(Clone)"))
         {
             GameObject newpo = Instantiate(potion10);
             newpo.transform.position = spawnPosition;
