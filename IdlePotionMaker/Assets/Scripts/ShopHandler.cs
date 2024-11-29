@@ -23,7 +23,7 @@ public class ShopHandler : MonoBehaviour
     private Text hPrice, tPrice, ePrice, dPrice;
 
     [SerializeField]
-    private GameObject UniHorn, TroToe, OrcEar, DragDung, recipeBook;
+    private GameObject UniHorn, TroToe, OrcEar, DragDung, recipeBook, newCauldron;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +40,7 @@ public class ShopHandler : MonoBehaviour
         TroToe.SetActive(false);
         OrcEar.SetActive(false);
         DragDung.SetActive(false);
+        newCauldron.SetActive(false);
         hPrice.enabled = false;
         tPrice.enabled = false;
         ePrice.enabled = false;
@@ -184,6 +185,7 @@ public class ShopHandler : MonoBehaviour
         if(csold == true)
         {
             Debug.Log("work in progress");
+            newCauldron.SetActive(true);
         }
         if(hsold == true)
         {
