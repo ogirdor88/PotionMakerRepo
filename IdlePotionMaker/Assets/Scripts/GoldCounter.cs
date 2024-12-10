@@ -11,6 +11,8 @@ public class GoldCounter : MonoBehaviour
     public TMP_Text goldText;
     public int currentCount;
 
+    private bool passive;
+
     private void Awake()
     {
         instance = this;
@@ -20,6 +22,7 @@ public class GoldCounter : MonoBehaviour
     void Start()
     {
         goldText.text = "Gold: $" + currentCount.ToString();
+        passive = false;
     }
 
     public void IncreaseGold(int v)
@@ -34,5 +37,21 @@ public class GoldCounter : MonoBehaviour
         currentCount -= cost;
         goldText.text = "Gold: $" + currentCount.ToString();
     }
-   
+
+    private void Update()
+    {
+        if (!passive) 
+        {
+            currentCount++;
+            goldText.text = "Gold: $" + currentCount.ToString();
+            StartCoroutine(PassiveIncome());
+        }
+    }
+
+    private IEnumerator PassiveIncome()
+    {
+        passive = true;
+        yield return new WaitForSeconds(2f);
+        passive = false;
+    }
 }

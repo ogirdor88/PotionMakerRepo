@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4913513808280793921}
   - component: {fileID: 4757168364536929679}
   m_Layer: 0
-  m_Name: Potion Of Telepathy
+  m_Name: Potion of Telepathy
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
