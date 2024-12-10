@@ -60,21 +60,26 @@ public class ShopHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inShop)
+        /*if (inShop)
         {
             shopUI.SetActive(true);
         }
         else
         {
             shopUI.SetActive(false);
-        }
+        }*/
 
         IngredientsCheck();
     }
 
     public void ShopToggle()
     {
-        inShop = !inShop;
+        if(!recipes)
+        {
+            inShop = !inShop;
+            shopUI.SetActive(inShop);
+        }
+        
     }
 
     public void CauldronButton()
@@ -227,7 +232,10 @@ public class ShopHandler : MonoBehaviour
 
     public void RecipeButton()
     {
-        recipes = !recipes;
-        recipeBook.SetActive(recipes);
+        if(!inShop) 
+        {
+            recipes = !recipes;
+            recipeBook.SetActive(recipes);
+        }
     }
 }

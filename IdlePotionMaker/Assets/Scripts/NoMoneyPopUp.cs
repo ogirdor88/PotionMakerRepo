@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class NoMoneyPopUp : MonoBehaviour
 {
     [SerializeField]
-    private GameObject popUp;
+    private GameObject popUp, HTPUI;
     [SerializeField]
     private Image background;
     [SerializeField]
@@ -24,6 +24,7 @@ public class NoMoneyPopUp : MonoBehaviour
         popUp.SetActive(false);
         backgroundColor = background.color;
         textColor = popupText.color;
+        HTPUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -67,5 +68,15 @@ public class NoMoneyPopUp : MonoBehaviour
             IngredientSpawner.popup = false;
             popUp.SetActive(false);
         }
+    }
+
+    public void HowToPlay()
+    {
+        HTPUI.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        HTPUI.SetActive(false);
     }
 }
