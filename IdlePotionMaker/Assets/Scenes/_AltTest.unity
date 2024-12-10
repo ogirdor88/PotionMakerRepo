@@ -2217,8 +2217,7 @@ MonoBehaviour:
 
     View the upgrade tab by pressing the shop button.
 
-    Good
-    luck!'
+    Good luck!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8512b61f0d922e641ad3d9f39749d6ac, type: 2}
   m_sharedMaterial: {fileID: 6157380374988240974, guid: 8512b61f0d922e641ad3d9f39749d6ac,
@@ -8176,7 +8175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 918918450}
-  currentCount: 900
+  currentCount: 90
 --- !u!4 &1542185498
 Transform:
   m_ObjectHideFlags: 0
